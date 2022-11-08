@@ -4,6 +4,6 @@ import { Injectable } from '@nestjs/common';
 export class AppService {
   getHello(): string {
     console.log(`Request received at localhost:3000`);
-    return 'It works sonn lol';
+    return 'Hello World!';
   }
 }
