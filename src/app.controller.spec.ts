@@ -18,5 +18,15 @@ describe('AppController', () => {
     it('should return "Hello World!"', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
+
+    it('should return physicians', () => {
+      const mockPhysicians = [
+        'Steve',
+        'George',
+        'Jake'
+      ];
+
+      expect(appController.getPhysicians()).toEqual(mockPhysicians);
+    });
   });
 });

@@ -3,11 +3,18 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
-  // invoke at 'localhost:3000' without any endpoint route..
   @Get()
   getHello(): string {
     return this.appService.getHello();
+  }
+
+  // TODO: should accept a physician name as a string query param
+  @Get('/physicians')
+  getPhysicians(): Array<string> {
+
+    // should call AppService, where the physician name will be validated
+    return this.appService.getPhysicians();
   }
 }
